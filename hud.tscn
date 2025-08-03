@@ -10,10 +10,11 @@ action = &"start_game"
 events = [SubResource("InputEventAction_64ctp")]
 
 [node name="HUD" type="CanvasLayer"]
+follow_viewport_enabled = true
 script = ExtResource("1_r5bq7")
 
 [node name="ScoreLabel" type="Label" parent="."]
-offset_right = 144.0
+offset_right = 136.0
 offset_bottom = 78.0
 size_flags_horizontal = 4
 theme_override_fonts/font = ExtResource("1_kk5b2")
@@ -23,7 +24,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="HighScoreLabel" type="Label" parent="."]
-offset_left = 904.0
+offset_left = 872.0
 offset_right = 1152.0
 offset_bottom = 78.0
 size_flags_horizontal = 4

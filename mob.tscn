@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://fm5n41v2w1kg"]
+[gd_scene load_steps=11 format=3 uid="uid://fm5n41v2w1kg"]
 
 [ext_resource type="Texture2D" uid="uid://cv574r7tcl22c" path="res://art/enemyFlyingAlt_1.png" id="1_ejfk0"]
 [ext_resource type="Script" uid="uid://bs88yswe11whh" path="res://mob.gd" id="1_ikkh5"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://daxsx22ajit5c" path="res://art/enemySwimming_2.png" id="4_2si12"]
 [ext_resource type="Texture2D" uid="uid://2oiy3o5or4sp" path="res://art/enemyWalking_1.png" id="5_ba7f3"]
 [ext_resource type="Texture2D" uid="uid://bqvofqpyxsogx" path="res://art/enemyWalking_2.png" id="6_is4ad"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_1qmh0"]
+friction = 0.0
+bounce = 1.1
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_htkg2"]
 animations = [{
@@ -49,6 +53,7 @@ radius = 37.0
 height = 102.0
 
 [node name="Mob" type="RigidBody2D" groups=["mobs"]]
+physics_material_override = SubResource("PhysicsMaterial_1qmh0")
 gravity_scale = 0.0
 script = ExtResource("1_ikkh5")
 
